@@ -40,6 +40,7 @@ cd app-producer
 ### Step 2: Install Dependencies
 ```bash
 npm install --save @nestjs/microservices amqplib
+npm install amqp-connection-manager
 ```
 
 ### Step 3: Configure the Producer Service
@@ -153,6 +154,7 @@ cd app-consumer
 ### Step 2: Install Dependencies
 ```bash
 npm install --save @nestjs/microservices amqplib
+npm install amqp-connection-manager
 ```
 
 ### Step 3: Configure the Consumer Service
@@ -321,6 +323,12 @@ docker-compose up --build
 1.	Send a Message: Access http://localhost:3000/send to send a message from App 1 (Producer).
 2.	Receive the Message: Observe the logs of App 2 (Consumer) to see the message received.
 3.	RabbitMQ Management UI: Visit http://localhost:15672 (username: guest, password: guest) to monitor RabbitMQ queues.
+
+
+## Steps to run the project
+```bash
+docker-compose down
+```
 
 Project Structure
 ```
